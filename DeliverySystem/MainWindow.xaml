@@ -1,0 +1,17 @@
+﻿<Window x:Class="DeliverySystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DeliverySystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="397.353" Width="525">
+    <Grid>
+        <ListBox x:Name="lstBoxVehicles" SelectionChanged="lstBoxVehicles_SelectionChanged" SelectedIndex="0" DisplayMemberPath="VehicleType" ItemsSource="{Binding ActiveVehicles}" HorizontalAlignment="Left" Height="116" Margin="10,10,0,0" VerticalAlignment="Top" Width="372"/>
+        <DataGrid x:Name="dataGridDeliveries" ItemsSource="{Binding DisplayedDeliveries}"  AutoGenerateColumns="True" HorizontalAlignment="Left" Height="100" Margin="10,183,0,0" VerticalAlignment="Top" Width="497"/>
+        <Label Content="Deliveries:" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top"/>
+        <Label Content="Total Travel Time:" HorizontalAlignment="Left" Margin="10,288,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBoxTravelTime" HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="116,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
